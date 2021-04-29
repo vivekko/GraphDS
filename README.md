@@ -7,20 +7,20 @@
 If the graph is weighted, use pair class to store the weights 
 
 ## How de we traverse a graph ?
-1. BFS  
+### 1. BFS  
     TC = O(N+E)
     SC = O(N+E) + O(N) + O(N)
-    ### Algorithm 
+#### Algorithm 
     1. Run a loop for connected components
     2. Check if the node has been visited
     2. Make a queue and store the first node in it, iff the node hasn't been visited
     3. Run a loop as long as queue is not empty and pop out the front node of queue and process it
     4. For that node run a loop to traverse the list for that node and push those nodes which aren't been visited
 
-2. DFS
+### 2. DFS
     TC = O(N+E)
     SC = O(N+E) + O(N) + O(N)
-    ### Algorithm
+#### Algorithm
     1. Run a loop for connected components
     2. Check if the node has been visited 
     3. Call a recursive dfs function and pass the first node, visited array, adjacency list and the processing list
