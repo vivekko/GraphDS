@@ -42,7 +42,7 @@ void bfs(int n, vector<int> adj[]){
             while(!q.empty()){
                 int node = q.front();
                 q.pop();
-                bfsearch.push_back(node);
+                bfsearch.push_back(node); // Processing the node
                 for(auto i:adj[node]){
                     if(!visited[i]){
                         q.push(i);
@@ -63,11 +63,11 @@ void solve(){
         adj[u].push_back(x);
         adj[x].push_back(u);
     }
-    for(int i=0;i<n;i++){
-        if(visited[i]!=1){
+    // for(int i=0;i<n;i++){
+        // if(visited[i]!=1){
             bfs(n,adj);
-        }
-    }
+        // }
+    // }
 
 }
 int32_t vivek(){
