@@ -26,7 +26,7 @@ If the graph is weighted, use pair class to store the weights
     3. Call a recursive dfs function and pass the first node, visited array, adjacency list and the processing list
     4. In the recursive dfs call mark the node as visited and process the node.
     5. Recursive call the dfs on the adjacency list if it's not been visited.
-### Detect a cycle in an undirected graph using BFS
+### Detect a cycle in an undirected graph using BFS 
     TC = O(N+E) and SC = O(N+E) + O(N) + O(N)
 ### Algorithm
     1. Run a loop for connected components.
@@ -36,3 +36,10 @@ If the graph is weighted, use pair class to store the weights
     4. Traverse in BFS way and check if the adjacent node has already been visited but is not the parent.
 
 
+### Detect a cycle in an undirected graph using DFS 
+    TC = O(N+E) and SC = O(N+E) + O(N) + O(N)
+### Algorithm
+    1. Run a loop for connected components.
+    2. Call the checking function.
+    3. Store parent and well as the child(anything) and keep calling it in DFS until one of the component returns true
+##### dfs(list,&cache,node,parent) 
