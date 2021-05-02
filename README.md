@@ -42,4 +42,6 @@ If the graph is weighted, use pair class to store the weights
     1. Run a loop for connected components.
     2. Call the checking function.
     3. Store parent and well as the child(anything) and keep calling it in DFS until one of the component returns true
-##### dfs(list,&cache,node,parent) 
+```C++
+    dfs(list,&cache,node,parent) 
+```
