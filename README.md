@@ -10,7 +10,7 @@ If the graph is weighted, use pair class to store the weights
 ### 1. BFS  
     TC = O(N+E)
     SC = O(N+E) + O(N) + O(N)
-### Algorithm 
+#### Algorithm 
     1. Run a loop for connected components
     2. Check if the node has been visited
     2. Make a queue and store the first node in it, iff the node hasn't been visited
@@ -20,15 +20,15 @@ If the graph is weighted, use pair class to store the weights
 ### 2. DFS
     TC = O(N+E)
     SC = O(N+E) + O(N) + O(N)
-### Algorithm
+#### Algorithm
     1. Run a loop for connected components
     2. Check if the node has been visited 
     3. Call a recursive dfs function and pass the first node, visited array, adjacency list and the processing list
     4. In the recursive dfs call mark the node as visited and process the node.
     5. Recursive call the dfs on the adjacency list if it's not been visited.
-### Detect a cycle in an undirected graph using BFS 
+### 3. Detect a cycle in an undirected graph using BFS 
     TC = O(N+E) and SC = O(N+E) + O(N) + O(N)
-### Algorithm
+#### Algorithm
     1. Run a loop for connected components.
     2. Call the checking function.
     3. Modify the BFS queue by taking the parent elements of the node as well.
@@ -36,9 +36,9 @@ If the graph is weighted, use pair class to store the weights
     4. Traverse in BFS way and check if the adjacent node has already been visited but is not the parent.
 
 
-### Detect a cycle in an undirected graph using DFS 
+### 4. Detect a cycle in an undirected graph using DFS 
     TC = O(N+E) and SC = O(N+E) + O(N) + O(N)
-### Algorithm
+#### Algorithm
     1. Run a loop for connected components.
     2. Call the checking function.
     3. Store parent and well as the child(anything) and keep calling it in DFS until one of the component returns true
@@ -46,9 +46,9 @@ If the graph is weighted, use pair class to store the weights
     dfs(list,&cache,node,parent) 
 ```
 
-### Check if the graph is Bipartite or not (2 colourable)
+### 5. Check if the graph is Bipartite or not (2 colourable)
     TC = O(N+E) and SC = (N + E) + O(N) + O(N)
-### Algorithm
+#### Algorithm
     1. Run a loop for connected components 
     2. Instead of visted list, maintain a colour list, initially set to -1
     3. We use the concept of graph colouring in this algo
