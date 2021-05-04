@@ -49,8 +49,9 @@ If the graph is weighted, use pair class to store the weights
 ### 5. Check if the graph is Bipartite or not (2 colourable)
     TC = O(N+E) and SC = (N + E) + O(N) + O(N)
 #### Algorithm
+```dart
     1. Run a loop for connected components 
     2. Instead of visted list, maintain a colour list, initially set to -1
     3. We use the concept of graph colouring in this algo
     4. Traverse in BFS way and intially colour the node to 1 and its adjancent to the opposite( 1 - 1)
-    5. If at any point of the traversal we find that the parent node and its adjacent node has the same colour, we call off the search operation and return false  
+    5. If at any point of the traversal we find that the parent node and its adjacent node has the same colour, we call off the search operation and return false  ```
