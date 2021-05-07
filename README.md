@@ -69,3 +69,12 @@ If the graph is weighted, use pair class to store the weights
     4. Traverse in DFS way and intially colour the node to 1 and its adjancent to the opposite( 1 - 1) and call DFS again
     5. If at any point of the traversal we find that the parent node and its adjacent node has the same colour, we call off the search operation and return false  
 ```
+
+### 7. Detect cycle in a directed graph
+```C
+    1. Run a loop for connected components 
+    2. Here we need two list to mark visited nodes, one to keep track of visited nodes and other to keep track of the dfs calls
+    3. We use visited list to keep track of the places where we did not get any cycle and it becomes useless to go the same place searching for a cycle 
+    4. We traverse in a DFS way similar to undirected graph but unmarking the dfsvisited list once we get out of the recursion call
+    5. When dfsvisited graph finds a node which has been visited before then we got our cycle otherwise better luck in the next component.
+```
