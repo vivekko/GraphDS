@@ -32,38 +32,40 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define vec_p vector<pair<int,int>
 #define v vector<int>
 
-bool dfs(int node,v &vis,v &dfsvisit,v adj[]){
+void dfs(int node, v adj[],stack<int> &st, v &vis){
     vis[node] = 1;
-    dfsvisit[node] = 1;
     for(auto i:adj[node]){
-        if(!vis[i]){
-            if(dfs(i,vis,dfsvisit,adj)) return true;
-        }
-        else if(dfsvisit[i])    return true;
+        if(!vis[i]) dfs(i,adj,st,vis);
     }
-    dfsvisit[node] = 0;
-    return false;
+    st.push(node);
 }
 
-
-bool isCyclic(v adj[],int n){
-    v vis(n+1),dfsvisit(n+1);
+void TopoSort(stack <int> &st,v adj[],int n){
+    v vis(n+1);
     for(int i=1;i<=n;i++){
         if(!vis[i]){
-            dfs(i,vis,dfsvisit,adj);
+            dfs(i,adj,st,vis);
         }
     }
 }
-
 void solve(){
-    int m,n;
-    cin>>m>>n;
+    int n,m;
+    cin>>n>>m;
     v adj[n+1];
     for(int i=1;i<=m;i++){
-        int x,y;cin>>x>>y;
+        int x,y;
+        cin>>x>>y;
         adj[x].push_back(y);
+        // adh[y]
     }
-    isCyclic(adj,n);
+    stack<int> st;
+    TopoSort(st,adj,n);
+    v Topo(n+1);
+    while(!st.empty()){
+        Topo.push_back(st.top());
+        st.pop();
+    }
+    for(auto x:Topo)    cout<<x<<" ";
 
 }
 int32_t vivek(){

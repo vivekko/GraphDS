@@ -78,3 +78,16 @@ If the graph is weighted, use pair class to store the weights
     4. We traverse in a DFS way similar to undirected graph but unmarking the dfsvisited list once we get out of the recursion call
     5. When dfsvisited graph finds a node which has been visited before then we got our cycle otherwise better luck in the next component.
 ```
+
+### Topological sort
+
+    TC : O(N+E) SC: O(N) ASC: O(N)
+Linear Ordering of vertices such that if there exists a directed edge between x and y then x will appear before y
+It is only possible for DAGs
+There can  be multiple TopoSort sol
+![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fguides.codepath.com%2Fcompsci%2FTopological-Sort&psig=AOvVaw0Q3r2jkw65hglJp8yd4USc&ust=1620532239707000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCIDfiZiXufACFQAAAAAdAAAAABAD)
+
+    1. Run a loop for all the nodes. Carry a stack as well as visited list
+    2. Traverse in a DFS way
+    3. When a DFS call for 1 node is over, put the node in a stack
+    4. Reverse the stack and that's one of your topo sort output
