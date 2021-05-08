@@ -1,5 +1,6 @@
 # Graph data structure and its algorithms
 
+![alt text](https://www.uniquesoftwaredev.com/wp-content/uploads/2019/12/directed_undirected.png)
 ## How do we store a graph in memory ? 
 1. Adjacency Matrix: Can be used only for smaller numbers of nodes
 2. Adjacency List: Can be used for larger values of nodes
@@ -98,4 +99,3 @@ There can  be multiple TopoSort sol
     3. Traverse in BFS way and at each visit subtract the indegree by 1, as long as it doesn't reach 0 
     4. If the indegree of the node becomes 0, push it into the queue;
     5. The queue has one of Toposort orderings
-    
