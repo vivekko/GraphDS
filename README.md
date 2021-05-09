@@ -93,9 +93,14 @@ There can  be multiple TopoSort sol
     3. When a DFS call for 1 node is over, put the node in a stack
     4. Reverse the stack and that's one of your topo sort output
 
-#### Kahn Algorithm (BFS)
+### Kahn Algorithm for TopoSort (BFS)
     1. Calculate indegree of each node
     2. Store indegree 0 in a queue
     3. Traverse in BFS way and at each visit subtract the indegree by 1, as long as it doesn't reach 0 
     4. If the indegree of the node becomes 0, push it into the queue;
-    5. The queue has one of Toposort orderings
+    5. The queue after the BFS traversal has one of Toposort orderings
+
+### Kahn Algorithm for Cycle Detection 
+    1.similar to Toposort 
+    2. We maintain a counter variable to count the elements of queue while traversing
+    3. If the counter is not equal to the number of nodes then a cycle must exist because of which TopoSort failed
