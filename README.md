@@ -101,6 +101,15 @@ There can  be multiple TopoSort sol
     5. The queue after the BFS traversal has one of Toposort orderings
 
 ### Kahn Algorithm for Cycle Detection 
-    1.similar to Toposort 
+    1. Similar to Toposort 
     2. We maintain a counter variable to count the elements of queue while traversing
     3. If the counter is not equal to the number of nodes then a cycle must exist because of which TopoSort failed
+
+### Shortest Path in an Undirected graph from a node to all other nodes
+    1. Traverse in BFS way
+    2. Maintain a list of distances and assign those values to inf
+    3. For every adjacent node we are exploring, we check if the distance of that node is greater than the distance of the path we  came from + 1 and storing the less expensive value.
+    4. Whenever step 3 becomes true we push the node in the queue.
+    5. The list obtained at the last will be our shortest path to all nodes from the source node. 
+
+
