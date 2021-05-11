@@ -80,7 +80,7 @@ If the graph is weighted, use pair class to store the weights
     5. When dfsvisited graph finds a node which has been visited before then we got our cycle otherwise better luck in the next component.
 ```
 
-### Topological sort
+### 8.Topological sort
 
     TC : O(N+E) SC: O(N) ASC: O(N)
 Linear Ordering of vertices such that if there exists a directed edge between x and y then x will appear before y
@@ -93,23 +93,29 @@ There can  be multiple TopoSort sol
     3. When a DFS call for 1 node is over, put the node in a stack
     4. Reverse the stack and that's one of your topo sort output
 
-### Kahn Algorithm for TopoSort (BFS)
+### 9. Kahn Algorithm for TopoSort (BFS)
     1. Calculate indegree of each node
     2. Store indegree 0 in a queue
     3. Traverse in BFS way and at each visit subtract the indegree by 1, as long as it doesn't reach 0 
     4. If the indegree of the node becomes 0, push it into the queue;
     5. The queue after the BFS traversal has one of Toposort orderings
 
-### Kahn Algorithm for Cycle Detection 
+### 10. Kahn Algorithm for Cycle Detection 
     1. Similar to Toposort 
     2. We maintain a counter variable to count the elements of queue while traversing
     3. If the counter is not equal to the number of nodes then a cycle must exist because of which TopoSort failed
 
-### Shortest Path in an Undirected graph from a node to all other nodes
+### 11. Shortest Path in an Undirected graph from a node to all other nodes with unit weights
     1. Traverse in BFS way
     2. Maintain a list of distances and assign those values to inf
     3. For every adjacent node we are exploring, we check if the distance of that node is greater than the distance of the path we  came from + 1 and storing the less expensive value.
     4. Whenever step 3 becomes true we push the node in the queue.
     5. The list obtained at the last will be our shortest path to all nodes from the source node. 
+
+### 12. Shortest Path in an DAG from source to other nodes
+    1. Find the toposort and store it in a stack
+    2. Pop out one by one and find if the node has been visited before 
+    3. check if the distance of the adjacent node is less than prev.
+    4. Keep updating the values for the distance list
 
 
