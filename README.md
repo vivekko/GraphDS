@@ -118,4 +118,11 @@ There can  be multiple TopoSort sol
     3. check if the distance of the adjacent node is less than prev.
     4. Keep updating the values for the distance list
 
+### 13. Dijkstra's Algortithm
+    TC = O(nlog2n)
 
+    1.Maintain a min heap<{distance,node}>
+    2.BFS traversal
+    3.Initially marks every distance as inf and source vertex = 0
+    4.Whenever we find a better distance push the node and dist in minHeap of that node and distance
+    
