@@ -33,7 +33,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define v vector<int>
 void solve(){
     int m,n;cin>>n>>m;
-    //
+    //MST
 
 }
 int32_t vivek(){
