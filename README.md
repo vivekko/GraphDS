@@ -126,6 +126,9 @@ There can  be multiple TopoSort sol
     3.Initially marks every distance as inf and source vertex = 0
     4.Whenever we find a better distance push the node and dist in minHeap of that node and distance
 
-### 14 Minimum Spanning Trees
+### 14. Minimum Spanning Trees
 ![alt text](https://miro.medium.com/max/962/1*RC0NtEiAvMigfjDHSZBa3g.png)
+
+### 15. Prim's Algorithm
+![alt text](https://static.javatpoint.com/core/images/prims-algorithm-java.png)
     
